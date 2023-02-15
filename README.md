@@ -26,6 +26,12 @@
 
 
 # Pantallas principales de su aplicacion
+![image](https://user-images.githubusercontent.com/62730462/219045806-0ed6f46b-6d2d-44a2-a046-8b5925bb3851.png)
+![image](https://user-images.githubusercontent.com/62730462/219045853-9d84e560-35fe-4456-a6b2-3b93f35d9b87.png)
+![image](https://user-images.githubusercontent.com/62730462/219046157-56741d83-8b83-4870-b0e3-4b24b0d4c574.png)
+![image](https://user-images.githubusercontent.com/62730462/219046232-09107660-3199-4dc6-961b-ae47288f31d0.png)
+![image](https://user-images.githubusercontent.com/62730462/219046294-306e10ae-4d97-487b-8020-ff1dcfc923b4.png)
+![image](https://user-images.githubusercontent.com/62730462/219046924-18bfc275-f32e-402a-a99e-767a8b26037a.png)
 
   
  
