@@ -18,12 +18,13 @@
   ![Imagen de WhatsApp 2023-02-10 a las 09 36 59](https://user-images.githubusercontent.com/62730462/219037370-6fcf5747-1662-4214-b223-d4f9d28c61d8.jpg)
   
 # Marroquin Martin, Andres
-Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basicos de desarrollo web y y analisis de bases de datos
+Estudiante de ingenieria de sistemas de quinto semestre con conocimientos basicos de desarrollo web y y analisis de bases de datos, soy un estudiante dedicado, que le gusta aprender cosas nuevas, comprometido con el estudio y muy responsable
 ![image](https://user-images.githubusercontent.com/62730462/222012562-b5bc28b5-0439-4843-b77b-770b9733c37e.png)
   
 # Entregables
  Historias de Usuario
-![Diagrama en blanco (1)](https://user-images.githubusercontent.com/62730462/222046606-93e5cb19-ad2c-4c81-8433-518e1c687f6f.jpeg)
+![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222049250-64ff2f67-287b-49a9-b5b9-453096f96b9f.jpeg)
+
  
 # Diagrama de clases inicial del proyecto
 ![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222046268-a165f3dd-03ff-41e6-b49a-a7c1e761a2ea.png)
