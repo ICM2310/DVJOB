@@ -10,7 +10,7 @@
   ![image](https://user-images.githubusercontent.com/62730462/219036379-0bee2212-c73c-4171-91a4-9bdd1107be9c.png)
   
 # Vergara Torres, Maikol Alexander
-  Mi nombre es maikol vergara, tengo 27 años y soy un hombre trabajador y emprendedor, he estudiado marketing, medios audiovisuale, me gusta la realidad aumentada y el   desarrollo de videojuegos
+  Mi nombre es maikol vergara, tengo 27 años y soy un estudiante de septimo semestre, hombre trabajador y emprendedor, he realizados estudios de marketing, medios audiovisuale, me gusta la realidad aumentada y el desarrollo de videojuegos
   ![Imagen de WhatsApp 2023-02-15 a las 08 11 10](https://user-images.githubusercontent.com/62730462/219036701-ce9d0edd-df21-4b2c-9d5c-268267016a0a.jpg)
   
 # Guarnizo Campos, Sebastian 
@@ -20,7 +20,6 @@
 # Marroquin Martin, Andres
 Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basicos de desarrollo web y y analisis de bases de datos
 ![image](https://user-images.githubusercontent.com/62730462/222012562-b5bc28b5-0439-4843-b77b-770b9733c37e.png)
-
   
 # Entregables
  Historias de Usuario
@@ -30,12 +29,14 @@ Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basico
 ![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222046268-a165f3dd-03ff-41e6-b49a-a7c1e761a2ea.png)
 
 # Pantallas principales de su aplicacion
-![image](https://user-images.githubusercontent.com/62730462/219045806-0ed6f46b-6d2d-44a2-a046-8b5925bb3851.png)
-![image](https://user-images.githubusercontent.com/62730462/219045853-9d84e560-35fe-4456-a6b2-3b93f35d9b87.png)
-![image](https://user-images.githubusercontent.com/62730462/219046157-56741d83-8b83-4870-b0e3-4b24b0d4c574.png)
-![image](https://user-images.githubusercontent.com/62730462/219046232-09107660-3199-4dc6-961b-ae47288f31d0.png)
-![image](https://user-images.githubusercontent.com/62730462/219046294-306e10ae-4d97-487b-8020-ff1dcfc923b4.png)
-![image](https://user-images.githubusercontent.com/62730462/219046924-18bfc275-f32e-402a-a99e-767a8b26037a.png)
+![image](https://user-images.githubusercontent.com/62730462/222047869-edebaa5e-8e8b-4cb3-acbd-372cdc029e8f.png)
+![image](https://user-images.githubusercontent.com/62730462/222047902-f3def565-7fa8-4182-8971-739c26ea9223.png)
+![image](https://user-images.githubusercontent.com/62730462/222047945-91917f36-461e-4cf4-944f-42787b7ca3a0.png)
+![image](https://user-images.githubusercontent.com/62730462/222047991-2dd4f07b-9e3b-4ea3-be7b-18fc7ece4c66.png)
+![image](https://user-images.githubusercontent.com/62730462/222048031-fea3c7f2-7256-4958-8e3c-4e0345f32260.png)
+
+
+
 
   
  
