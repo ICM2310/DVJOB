@@ -19,6 +19,8 @@
   
 # Marroquin Martin, Andres
 Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basicos de desarrollo web y y analisis de bases de datos
+![image](https://user-images.githubusercontent.com/62730462/222012562-b5bc28b5-0439-4843-b77b-770b9733c37e.png)
+
   
 # Entregables
  Diagrama de casos de uso inicial del proyecto
