@@ -1,0 +1,16 @@
+{
+  "oficinas":[
+    { "nombre_oficina" : "Oficina1",
+      "municipio" : "Factativá"
+    },
+    { "nombre_oficina" : "Oficina2",
+      "municipio" : "Madrid"
+    },
+    { "nombre_oficina" : "Oficina3",
+      "municipio" : "Funza"
+    },
+    { "nombre_oficina" : "Oficina4",
+      "municipio" : "Soacha"
+    }
+  ]
+}
