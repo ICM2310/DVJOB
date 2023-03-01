@@ -23,14 +23,11 @@ Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basico
 
   
 # Entregables
- Diagrama de casos de uso inicial del proyecto
- ![Imagen de WhatsApp 2023-02-14 a las 23 14 36](https://user-images.githubusercontent.com/62730462/219038204-fc03056f-733a-4189-a34b-8c8a909a582f.jpg)
+ Historias de Usuario
+![Diagrama en blanco (1)](https://user-images.githubusercontent.com/62730462/222046606-93e5cb19-ad2c-4c81-8433-518e1c687f6f.jpeg)
  
 # Diagrama de clases inicial del proyecto
 ![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222046268-a165f3dd-03ff-41e6-b49a-a7c1e761a2ea.png)
-
-
-
 
 # Pantallas principales de su aplicacion
 ![image](https://user-images.githubusercontent.com/62730462/219045806-0ed6f46b-6d2d-44a2-a046-8b5925bb3851.png)
