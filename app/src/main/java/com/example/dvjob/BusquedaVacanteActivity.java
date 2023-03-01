@@ -30,6 +30,7 @@ public class BusquedaVacanteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityBusquedaVacanteBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
+        setContentView(view);
 
         JSONObject json = null;
         try {
@@ -56,14 +57,9 @@ public class BusquedaVacanteActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 throw new RuntimeException(e);
             }
-
         }
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, array);
         binding.oficinasListView.setAdapter(adapter);
-
-
-
     }
 
     public String loadJSONFromAsset() {
