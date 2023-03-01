@@ -12,6 +12,18 @@
         android:theme="@style/Theme.DVJOB"
         tools:targetApi="31">
         <activity
+            android:name=".RegistroSolicitud"
+            android:exported="false" />
+        <activity
+            android:name=".VisualizarSolicitudesUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".SolicitudUsuario"
+            android:exported="false" />
+        <activity
             android:name=".SolicitudesEmpleadoActivity"
             android:exported="false" />
         <activity

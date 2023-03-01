@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grav"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SolicitudesEmpleadoActivity">
@@ -59,23 +60,84 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.2" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="409dp"
-        android:layout_height="567dp"
+        android:layout_width="408dp"
+        android:layout_height="542dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.698">
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/img_3" />
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#8DD603"
+                android:backgroundTint="#8DD603"
+                android:gravity="center"
+                android:text="EPS"
+                android:textAlignment="center"
+                android:textColor="#2842CD"
+                android:textIsSelectable="false"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#D6D5D5"
+                android:text="Afiliaciones y traslados"
+                android:textColor="#686161"
+                app:cornerRadius="10dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#8DD603"
+                android:gravity="center"
+                android:text="Prestamo"
+                android:textAlignment="center"
+                android:textColor="#2842CD"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#D6D5D5"
+                android:text="Solicitud de mercado de prestamo" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#8DD603"
+                android:gravity="center"
+                android:text="Caja de compensación"
+                android:textAlignment="center"
+                android:textColor="#2842CD"
+                android:textSize="24sp" />
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:backgroundTint="#D6D5D5"
+                android:text="Registros afiliados - traslados" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
