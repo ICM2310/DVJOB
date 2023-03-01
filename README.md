@@ -27,7 +27,8 @@ Estudiante de ingenieria de sistemas en quinto semestre con conocimientos basico
  ![Imagen de WhatsApp 2023-02-14 a las 23 14 36](https://user-images.githubusercontent.com/62730462/219038204-fc03056f-733a-4189-a34b-8c8a909a582f.jpg)
  
 # Diagrama de clases inicial del proyecto
-![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222021889-afd253f6-b0f9-4fa4-bf46-7fe09e003948.jpeg)
+![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222046268-a165f3dd-03ff-41e6-b49a-a7c1e761a2ea.png)
+
 
 
 
