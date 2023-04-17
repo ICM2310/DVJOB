@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "69367219668",
+    "project_id": "compumovilp-51478",
+    "storage_bucket": "compumovilp-51478.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69367219668:android:f91302deb956f935ce8241",
+        "android_client_info": {
+          "package_name": "com.example.compumovilp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69367219668-br7430bs70l679k8p2eftdp24jvf03ks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqeOimdLYxCs4I8JbOuxDwWlg4hu8SS9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69367219668-br7430bs70l679k8p2eftdp24jvf03ks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
