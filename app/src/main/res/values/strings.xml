@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CompuMovilP</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string-array name="opciones">
+        <item>1. Mosquera</item>
+        <item>2. Bogotá</item>
+        <item>3. Chía</item>
+    </string-array>
 </resources>

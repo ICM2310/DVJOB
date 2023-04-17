@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:dividerPadding="20dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MapActivity">
+
+    <!-- Sección del spinner -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Seleccione una sede:"
+            android:textSize="20sp"
+            android:fontFamily="@font/robotolight"
+            />
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinnerMap"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Seleccionar una opción"
+            android:background="@drawable/custom_spinner_background"
+            android:textAppearance="@style/SpinnerTextStyle"
+        />
+
+    </LinearLayout>
+
+    <!-- Mapa y campo de entrada -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Mapa -->
+        <org.osmdroid.views.MapView
+            android:id="@+id/osmMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Campo de entrada -->
+
+    </FrameLayout>
+
+</LinearLayout>
