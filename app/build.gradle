@@ -42,9 +42,7 @@ dependencies {
     implementation 'org.osmdroid:osmdroid-android:6.1.11'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.github.MKergall:osmbonuspack:6.8.0'
-    implementation 'androidx.biometric:biometric:1.2.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'androidx.activity:activity-ktx:1.4.0'
+
 
 
     implementation 'com.google.firebase:firebase-auth-ktx:21.3.0'
