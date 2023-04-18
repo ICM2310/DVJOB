@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CooperBlackTextViewStyle" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/cooper_black</item>
+    </style>
+</resources>
