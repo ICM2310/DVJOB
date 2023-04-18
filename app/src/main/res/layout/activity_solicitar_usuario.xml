@@ -51,7 +51,7 @@
             android:background="#0024A2" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/empresa1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -87,7 +87,7 @@
             android:textAppearance="@style/SpinnerTextStyle" />
 
         <Button
-            android:id="@+id/moficiarInformacionBtn"
+            android:id="@+id/verSolicitudBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"

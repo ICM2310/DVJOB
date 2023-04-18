@@ -61,7 +61,7 @@
             android:textSize="17sp" />
 
         <Button
-            android:id="@+id/estadoSolicitudBtn"
+            android:id="@+id/atenderSolicitudBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -70,7 +70,7 @@
             android:textSize="17sp" />
 
         <Button
-            android:id="@+id/moficiarInformacionBtn"
+            android:id="@+id/verSolicitudBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
