@@ -18,4 +18,11 @@
         <item>Flores la mana</item>
     </string-array>
 
+
+    <string-array name="TipoDocumento">
+        <item>CC</item>
+        <item>TI</item>
+        <item>CE</item>
+    </string-array>
+
 </resources>

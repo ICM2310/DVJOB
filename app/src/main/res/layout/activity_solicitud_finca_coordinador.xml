@@ -60,7 +60,7 @@ tools:context=".SolicitudFincaCoordinador">
         android:textSize="15sp" />
 
     <Spinner
-        android:id="@+id/spinnerMap2"
+        android:id="@+id/spinnerTipoCedula"
         android:layout_width="match_parent"
         android:layout_height="51dp"
         android:layout_marginTop="8dp"

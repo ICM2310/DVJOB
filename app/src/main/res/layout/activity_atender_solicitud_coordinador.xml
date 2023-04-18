@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilUsuarioActivity">
+    tools:context=".AtenderSolicitudCoordinador">
 
 
     <LinearLayout
@@ -29,45 +29,63 @@
         android:padding="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.37">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="20dp"
-            android:text="Juan Guarnizo "
+            android:layout_marginBottom="5dp"
+            android:text="Atención de Solicitudes"
             android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="30sp" />
+            android:textColor="#0024A2"
+            android:textSize="15sp" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <View
             android:layout_width="wrap_content"
-            android:layout_height="146dp"
-            android:src="@drawable/usuario" />
+            android:layout_height="1dp"
+            android:background="#0024A2" />
 
-        <Button
-            android:id="@+id/solicitudFincaUsuarioBtn"
+        <TextView
+            android:id="@+id/empresa1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#3DBB02"
-            android:text="Nueva solicitud"
-            android:textSize="17sp" />
+            android:text="Tipo de Cédula"
+            android:textColor="#0024A2"
+            android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/atenderSolicitudBtn"
+        <Spinner
+            android:id="@+id/spinnerTipoCedula"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/spinnerstylemain"
+            android:contentDescription="Seleccionar una opción"
+            android:textAppearance="@style/SpinnerTextStyle" />
+
+        <TextView
+            android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#3DBB02"
-            android:text="Estado de solicitudes"
-            android:textSize="17sp" />
+            android:text="Número Documenoto"
+            android:textColor="#0024A2"
+            android:textSize="15sp"
+            />
+
+        <EditText
+            android:id="@+id/cedulaInput"
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Introduce tu número de cédula"
+            />
 
         <Button
             android:id="@+id/buscarBtn"
@@ -75,7 +93,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:backgroundTint="#3DBB02"
-            android:text="Modificar Información"
+            android:text="Buscar"
             android:textSize="17sp" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

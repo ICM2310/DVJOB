@@ -24,7 +24,7 @@ public class SolicitarUsuario extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.tipoSolicitud, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        binding.spinnerMap2.setAdapter(adapter);
+        binding.spinnerTipoCedula.setAdapter(adapter);
 
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.Empresas, android.R.layout.simple_spinner_item);
