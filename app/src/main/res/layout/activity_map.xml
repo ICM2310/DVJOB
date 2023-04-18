@@ -23,7 +23,6 @@
             android:gravity="center"
             android:text="Seleccione una sede:"
             android:textSize="20sp"
-            android:fontFamily="@font/robotolight"
             />
 
         <!-- Spinner -->
