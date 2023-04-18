@@ -23,18 +23,20 @@ Estudiante de ingenieria de sistemas de quinto semestre con conocimientos basico
   
 # Entregables
  Historias de Usuario
-![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222049250-64ff2f67-287b-49a9-b5b9-453096f96b9f.jpeg)
+![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/232666681-9e7b8af5-738a-49fb-a3c0-320f943f2ada.jpeg)
 
  
 # Diagrama de clases inicial del proyecto
-![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/222046268-a165f3dd-03ff-41e6-b49a-a7c1e761a2ea.png)
+![Diagrama en blanco (1)](https://user-images.githubusercontent.com/62730462/232666642-a05758d0-1447-4787-81a2-fe19bc9db59e.jpeg)
+
 
 # Pantallas principales de su aplicacion
-![image](https://user-images.githubusercontent.com/62730462/222047869-edebaa5e-8e8b-4cb3-acbd-372cdc029e8f.png)
-![image](https://user-images.githubusercontent.com/62730462/222047902-f3def565-7fa8-4182-8971-739c26ea9223.png)
-![image](https://user-images.githubusercontent.com/62730462/222047945-91917f36-461e-4cf4-944f-42787b7ca3a0.png)
-![image](https://user-images.githubusercontent.com/62730462/222047991-2dd4f07b-9e3b-4ea3-be7b-18fc7ece4c66.png)
-![image](https://user-images.githubusercontent.com/62730462/222048031-fea3c7f2-7256-4958-8e3c-4e0345f32260.png)
+![image](https://user-images.githubusercontent.com/62730462/232665653-cdfdc0ae-13ce-49e5-a5d6-789d629e3b04.png)
+![image](https://user-images.githubusercontent.com/62730462/232665718-87edaf92-fe5e-45b4-86b9-73816006347a.png)
+![image](https://user-images.githubusercontent.com/62730462/232665757-7e3d991e-c890-43f4-9cfb-4855058a7f06.png)
+![image](https://user-images.githubusercontent.com/62730462/232665781-1d272639-0551-4603-8629-d6e4053eff32.png)
+![image](https://user-images.githubusercontent.com/62730462/232665795-144c04f3-c622-4047-9775-602379121c75.png)
+
 
 
 
