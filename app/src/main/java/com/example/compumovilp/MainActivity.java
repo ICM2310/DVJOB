@@ -27,7 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        binding.inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

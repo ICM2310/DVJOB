@@ -90,9 +90,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:backgroundTint="#3DBB02"
         android:text="Iniciar Sesión"
         android:textSize="17sp"
-        android:backgroundTint="#3DBB02"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contra_in" />
@@ -113,8 +113,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="32dp"
-        android:scaleType="fitCenter"
         android:background="#FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -123,12 +123,10 @@
         app:srcCompat="@drawable/huella" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:clickable="true"
-
         android:text="Registrarse"
         android:textColor="#3DBB02"
         android:textSize="15sp"
