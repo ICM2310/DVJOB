@@ -29,5 +29,14 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
             }
         });
 
+
+        binding.atenderSolicitudBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), AtenderSolicitudCoordinador.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

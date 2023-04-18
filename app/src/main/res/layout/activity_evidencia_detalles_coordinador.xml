@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Evidencia_DetallesCoordinador">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Evidencia_DetallesCoordinador">
 
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="63dp"
+    android:background="#3DBB02"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.37">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="5dp"
+            android:text="Selección Caja Compensación"
+            android:textAlignment="center"
+            android:textColor="#0024A2"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="#0024A2" />
+
+        <TextView
+            android:id="@+id/empresa1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:text="Cada de Compensación"
+            android:textColor="#0024A2"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/cajaCompensaciponSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/spinnerstylemain"
+            android:contentDescription="Seleccionar una opción"
+            android:textAppearance="@style/SpinnerTextStyle"
+            tools:layout_marginBottom="20dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:text="Sube el documento firmado por el empleado"
+            android:textColor="#0024A2"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btonCam"
+                android:layout_width="wrap_content"
+                android:layout_height="73dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/cam"
+                android:contentDescription="Botón para cargar una imágen desde la camara"/>
+
+            <ImageButton
+                android:id="@+id/btonArchivo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/archivo"
+                android:contentDescription="Botón para cargar una imágen desde galería"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <Button
+            android:id="@+id/buscarBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3DBB02"
+            android:text="subir Solicitud"
+            android:textSize="17sp" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
