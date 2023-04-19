@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
     private ActivityPerfilUsuarioBinding binding;
-
+    private FirebaseAuth mAuth;
 
 
 
@@ -34,9 +35,10 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), LoginActivity.class);
-                startActivity(intent);
-                finish();
+                mAuth.signOut();
+                Intent intent5 = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent5);
+
             }
         });
 

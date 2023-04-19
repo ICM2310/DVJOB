@@ -32,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mAuth.signOut();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
