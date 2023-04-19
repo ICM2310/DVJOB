@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.example.compumovilp.databinding.ActivityAtenderSolicitudCoordinadorBinding;
-import com.example.compumovilp.databinding.ActivityMainBinding;
 
 public class AtenderSolicitudCoordinador extends AppCompatActivity {
 
@@ -34,5 +33,14 @@ public class AtenderSolicitudCoordinador extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

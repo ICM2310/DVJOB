@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.compumovilp.databinding.ActivityMainBinding;
 import com.example.compumovilp.databinding.ActivitySolicitudFincaCoordinadorBinding;
 
 public class SolicitudFincaCoordinador extends AppCompatActivity {
@@ -30,6 +29,13 @@ public class SolicitudFincaCoordinador extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), MapActivity.class);
+                startActivity(intent);
+            }
+        });
+        binding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
             }
         });

@@ -19,6 +19,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical|end"
+            app:srcCompat="@drawable/logour" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,18 +105,14 @@
             android:text="Buscar"
             android:textSize="17sp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="179dp"
-                android:layout_height="226dp"
-                app:srcCompat="@drawable/atencion"
-                tools:layout_editor_absoluteX="76dp"
-                tools:layout_editor_absoluteY="68dp" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="246dp"
+            android:layout_height="213dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/atencion" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -106,8 +107,6 @@ public class MapActivity extends AppCompatActivity {
                         }
                     });
 
-
-
     ActivityResultLauncher<String> locationPermission = registerForActivityResult(
 
             new ActivityResultContracts.RequestPermission(),
@@ -134,6 +133,14 @@ public class MapActivity extends AppCompatActivity {
                 R.array.Sedes, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        binding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         checkLocationSettings();
 

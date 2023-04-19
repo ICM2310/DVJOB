@@ -12,12 +12,18 @@ tools:context=".Evidencia_DetallesCoordinador">
         android:layout_height="63dp"
         android:background="#3DBB02"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|center_horizontal|center_vertical|end"
+            app:srcCompat="@drawable/logour" />
 
     </LinearLayout>
 

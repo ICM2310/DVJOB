@@ -6,6 +6,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -14,7 +15,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.example.compumovilp.databinding.ActivityEvidenciaDetallesCoordinadorBinding;
-import com.example.compumovilp.databinding.ActivityMainBinding;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -66,6 +66,14 @@ public class Evidencia_DetallesCoordinador extends AppCompatActivity {
                 R.array.CajasCompesacion, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.cajaCompensaciponSpinner.setAdapter(adapter);
+
+        binding.logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         binding.btonArchivo.setOnClickListener(new View.OnClickListener() {
             @Override

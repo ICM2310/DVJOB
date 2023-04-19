@@ -19,6 +19,13 @@ tools:context=".SolicitudFincaCoordinador">
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.0">
 
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center|center_horizontal|center_vertical|end"
+        app:srcCompat="@drawable/logour" />
+
 </LinearLayout>
 
 <LinearLayout
@@ -133,9 +140,14 @@ tools:context=".SolicitudFincaCoordinador">
             android:id="@+id/imageView4"
             android:layout_width="184dp"
             android:layout_height="117dp"
-            app:srcCompat="@drawable/reloj"
-            tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="30dp" />
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="74dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/reloj" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
