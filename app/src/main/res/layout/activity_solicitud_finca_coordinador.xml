@@ -125,5 +125,18 @@ tools:context=".SolicitudFincaCoordinador">
         android:text="Ruta a sede"
         android:textSize="17sp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="184dp"
+            android:layout_height="117dp"
+            app:srcCompat="@drawable/reloj"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="30dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

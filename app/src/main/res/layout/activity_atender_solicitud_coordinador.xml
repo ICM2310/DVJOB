@@ -99,6 +99,19 @@
             android:text="Buscar"
             android:textSize="17sp" />
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="179dp"
+                android:layout_height="226dp"
+                app:srcCompat="@drawable/atencion"
+                tools:layout_editor_absoluteX="76dp"
+                tools:layout_editor_absoluteY="68dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 

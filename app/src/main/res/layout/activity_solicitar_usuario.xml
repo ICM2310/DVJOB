@@ -97,5 +97,19 @@
             android:backgroundTint="#3DBB02"
             android:text="realizar solicitud"
             android:textSize="17sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="167dp"
+                android:layout_height="185dp"
+                app:srcCompat="@drawable/solicitud"
+                tools:layout_editor_absoluteX="82dp"
+                tools:layout_editor_absoluteY="72dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
