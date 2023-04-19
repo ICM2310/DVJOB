@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
 import com.example.compumovilp.databinding.ActivitySolicitarUsuarioBinding;
@@ -44,6 +45,14 @@ public class SolicitarUsuario extends AppCompatActivity {
 
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        binding.buscarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SolicitarUsuario.this, "Solicitud enviada", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
