@@ -86,6 +86,13 @@
                 android:hint="Ingresa tu contraseña"
                 android:inputType="textPassword" />
 
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar sesión como coordinador"
+                />
+
             <Button
                 android:id="@+id/iniciar_sesion"
                 android:layout_width="match_parent"
@@ -119,6 +126,7 @@
                     android:textAlignment="center"
                     android:textColor="#3DBB02"
                     android:textSize="15sp" />
+
             </LinearLayout>
 
             <ImageButton
@@ -129,7 +137,8 @@
                 android:layout_marginTop="32dp"
                 android:background="#FFFFFF"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/huella" />
+                app:srcCompat="@drawable/huella"
+                android:contentDescription="Botón para acceder con huella"/>
 
         </LinearLayout>
     </ScrollView>

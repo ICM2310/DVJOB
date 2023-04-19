@@ -80,10 +80,20 @@ public class RegistroActivity extends AppCompatActivity {
 
     }
     private void updateUI(FirebaseUser currentUser){
+
         if(currentUser!=null){
-            Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
-            intent.putExtra("user", currentUser.getEmail());
-            startActivity(intent);
+            if(binding.checkBox.isChecked()){
+                Log.e("Activado", "currentUser es nulo");
+                Intent intent = new Intent(getBaseContext(), PerfilCoordinadorActivity.class);
+                intent.putExtra("user", currentUser.getDisplayName());
+                startActivity(intent);
+            }else{
+                Log.e("Desactivado", "textobox es nulo");
+                Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
+                intent.putExtra("user", currentUser.getDisplayName());
+                startActivity(intent);
+            }
+
         } else {
             binding.emailReg.setText("");
             binding.contraReg.setText("");

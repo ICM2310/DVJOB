@@ -23,9 +23,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import java.util.concurrent.Executor;
-
 public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
@@ -33,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "lOGIN";
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
-    ImageButton huella = binding.huella;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         // Agregar listener al botón de autenticación de huella digital
-        huella.setOnClickListener(new View.OnClickListener() {
+        binding.huella.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 biometricPrompt.authenticate(promptInfo);
@@ -75,7 +73,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-
+        binding.registro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), RegistroActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     @Override
@@ -106,9 +110,17 @@ public class LoginActivity extends AppCompatActivity {
     }
     private void updateUI(FirebaseUser currentUser){
         if(currentUser!=null){
-            Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
-            intent.putExtra("user", currentUser.getEmail());
-            startActivity(intent);
+            if(binding.checkBox.isChecked()){
+                Log.e("activado", "currentUser es nulo");
+                Intent intent = new Intent(getBaseContext(), PerfilCoordinadorActivity.class);
+                intent.putExtra("user", currentUser.getDisplayName());
+                startActivity(intent);
+            }else{
+                Log.e("desactivasvo", "textobox es nulo");
+                Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
+                intent.putExtra("user", currentUser.getDisplayName());
+                startActivity(intent);
+            }
         } else {
             binding.usuarioIn.setText("");
             binding.contraIn.setText("");
