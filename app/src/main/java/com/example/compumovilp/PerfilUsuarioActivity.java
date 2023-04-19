@@ -22,6 +22,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         binding = ActivityPerfilUsuarioBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        mAuth = FirebaseAuth.getInstance();
 
         binding.solicitudFincaUsuarioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,8 +37,8 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mAuth.signOut();
-                Intent intent5 = new Intent(view.getContext(), LoginActivity.class);
-                startActivity(intent5);
+                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                startActivity(intent);
 
             }
         });
