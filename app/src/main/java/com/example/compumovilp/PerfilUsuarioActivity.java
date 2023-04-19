@@ -36,6 +36,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
