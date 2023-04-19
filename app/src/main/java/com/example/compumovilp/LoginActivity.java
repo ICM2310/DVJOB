@@ -53,8 +53,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                FirebaseUser currentUser = mAuth.getCurrentUser();
-                updateUI(currentUser);
+                binding.usuarioIn.setText("andres@gmai.com");
+                binding.contraIn.setText("andres");
+                sigin();
             }
 
             @Override
