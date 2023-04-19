@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical">
 
         <!-- Título -->
@@ -22,8 +22,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Seleccione una sede:"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
         <!-- Spinner -->
         <Spinner
@@ -31,10 +30,9 @@
             android:layout_width="match_parent"
             android:layout_height="51dp"
             android:layout_marginTop="8dp"
-            android:contentDescription="Seleccionar una opción"
             android:background="@drawable/custom_spinner_background"
-            android:textAppearance="@style/SpinnerTextStyle"
-        />
+            android:contentDescription="Seleccionar una opción"
+            android:textAppearance="@style/SpinnerTextStyle" />
 
     </LinearLayout>
 
