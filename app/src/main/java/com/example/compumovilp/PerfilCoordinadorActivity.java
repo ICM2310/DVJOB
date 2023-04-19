@@ -40,7 +40,6 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
                 mAuth.signOut();
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -52,6 +51,13 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        binding.validarLlegadaBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent intent = new Intent(view.getContext(), NFCActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
