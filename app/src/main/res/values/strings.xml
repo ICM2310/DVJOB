@@ -25,4 +25,11 @@
         <item>CE</item>
     </string-array>
 
+
+    <string-array name="CajasCompesacion">
+        <item>Cafam</item>
+        <item>Compensar</item>
+        <item>Colsubsidio</item>
+    </string-array>
+
 </resources>
