@@ -51,6 +51,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -85,6 +86,8 @@ public class MapActivity extends AppCompatActivity {
     RoadManager roadManager;
 
     Polyline roadOverlay;
+    private FirebaseAuth mAuth;
+
 
 
     int cont = 0;
@@ -126,6 +129,8 @@ public class MapActivity extends AppCompatActivity {
         verifyPermission();
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mLocationRequest = createLocationRequest();
+        mAuth = FirebaseAuth.getInstance();
+
 
         Spinner spinner = findViewById(R.id.spinnerMap);
 
@@ -137,6 +142,8 @@ public class MapActivity extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
+
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
             }

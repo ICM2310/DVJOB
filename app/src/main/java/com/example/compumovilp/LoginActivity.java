@@ -32,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mAuth.signOut();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
+
 
         // Configurar BiometricPrompt
         Executor executor = ContextCompat.getMainExecutor(this);

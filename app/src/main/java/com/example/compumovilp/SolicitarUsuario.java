@@ -10,10 +10,13 @@ import android.widget.ArrayAdapter;
 
 import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
 import com.example.compumovilp.databinding.ActivitySolicitarUsuarioBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SolicitarUsuario extends AppCompatActivity {
 
     private ActivitySolicitarUsuarioBinding binding;
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,8 @@ public class SolicitarUsuario extends AppCompatActivity {
         binding = ActivitySolicitarUsuarioBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        mAuth = FirebaseAuth.getInstance();
+
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.tipoSolicitud, android.R.layout.simple_spinner_item);
@@ -35,6 +40,8 @@ public class SolicitarUsuario extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
+
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
             }

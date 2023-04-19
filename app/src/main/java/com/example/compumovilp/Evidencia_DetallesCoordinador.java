@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.example.compumovilp.databinding.ActivityEvidenciaDetallesCoordinadorBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -25,6 +26,8 @@ public class Evidencia_DetallesCoordinador extends AppCompatActivity {
     private Uri uriCamera;
 
     private ActivityEvidenciaDetallesCoordinadorBinding binding;
+    private FirebaseAuth mAuth;
+
 
     ActivityResultLauncher<String> mGetContentGallery = registerForActivityResult(
             new ActivityResultContracts.GetContent(),
@@ -61,6 +64,8 @@ public class Evidencia_DetallesCoordinador extends AppCompatActivity {
         binding = ActivityEvidenciaDetallesCoordinadorBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        mAuth = FirebaseAuth.getInstance();
+
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.CajasCompesacion, android.R.layout.simple_spinner_item);
@@ -70,6 +75,8 @@ public class Evidencia_DetallesCoordinador extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
+
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
             }

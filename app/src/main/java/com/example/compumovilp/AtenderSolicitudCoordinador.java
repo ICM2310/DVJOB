@@ -8,14 +8,20 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import com.example.compumovilp.databinding.ActivityAtenderSolicitudCoordinadorBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class AtenderSolicitudCoordinador extends AppCompatActivity {
 
     private ActivityAtenderSolicitudCoordinadorBinding binding;
 
+    private FirebaseAuth mAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
+
 
         binding = ActivityAtenderSolicitudCoordinadorBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
@@ -37,8 +43,11 @@ public class AtenderSolicitudCoordinador extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
+
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
+
             }
         });
 

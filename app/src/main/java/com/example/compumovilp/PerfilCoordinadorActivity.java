@@ -8,10 +8,13 @@ import android.view.View;
 
 import com.example.compumovilp.databinding.ActivityLoginBinding;
 import com.example.compumovilp.databinding.ActivityPerfilCoordinadorBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PerfilCoordinadorActivity extends AppCompatActivity {
 
     private ActivityPerfilCoordinadorBinding binding;
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,8 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
         binding = ActivityPerfilCoordinadorBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        mAuth = FirebaseAuth.getInstance();
+
 
 
         binding.solicitudFincaUsuarioBtn.setOnClickListener(new View.OnClickListener() {
@@ -32,8 +37,10 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
+
             }
         });
 
