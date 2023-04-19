@@ -27,7 +27,7 @@ Estudiante de ingenieria de sistemas de quinto semestre con conocimientos basico
 
  
 # Diagrama de clases inicial del proyecto
-![Diagrama en blanco (1)](https://user-images.githubusercontent.com/62730462/232666642-a05758d0-1447-4787-81a2-fe19bc9db59e.jpeg)
+![Diagrama en blanco (1)](https://user-images.githubusercontent.com/62730462/233102828-e6e4bc12-5cb5-4264-bc25-e9e71d259a06.jpeg)
 
 
 # Pantallas principales de su aplicacion
