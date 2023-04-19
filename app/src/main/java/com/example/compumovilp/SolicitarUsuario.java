@@ -39,6 +39,5 @@ public class SolicitarUsuario extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }
