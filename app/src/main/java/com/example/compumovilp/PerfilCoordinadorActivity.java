@@ -37,9 +37,10 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAuth.signOut();
                 Intent intent = new Intent(view.getContext(), LoginActivity.class);
                 startActivity(intent);
-                finish();
+
             }
         });
 
@@ -47,9 +48,7 @@ public class PerfilCoordinadorActivity extends AppCompatActivity {
         binding.atenderSolicitudBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
-
-                Intent intent = new Intent(view.getContext(), LoginActivity.class);
+                Intent intent = new Intent(view.getContext(), AtenderSolicitudCoordinador.class);
                 startActivity(intent);
             }
         });
