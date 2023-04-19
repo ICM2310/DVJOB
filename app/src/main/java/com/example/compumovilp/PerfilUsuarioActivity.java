@@ -24,6 +24,8 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
 
+
+
         binding.solicitudFincaUsuarioBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

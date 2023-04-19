@@ -23,6 +23,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.concurrent.Executor;
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,6 +47,9 @@ public class LoginActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
 
         // Configurar BiometricPrompt
@@ -79,7 +84,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         binding.registro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +91,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
     @Override
     public void onStart() {
@@ -116,11 +119,12 @@ public class LoginActivity extends AppCompatActivity {
         binding.registro.setMovementMethod(LinkMovementMethod.getInstance());
     }
     private void updateUI(FirebaseUser currentUser){
+
         if(currentUser!=null){
             if(binding.checkBox.isChecked()){
                 Log.e("activado", "currentUser es nulo");
                 Intent intent = new Intent(getBaseContext(), PerfilCoordinadorActivity.class);
-                intent.putExtra("user", currentUser.getDisplayName());
+                intent.putExtra("user", currentUser.getDisplayName().toString());
                 startActivity(intent);
             }else{
                 Log.e("desactivasvo", "textobox es nulo");
