@@ -6,16 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.compumovilp.databinding.ActivityLoginBinding;
 import com.example.compumovilp.databinding.ActivityRegistroBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -84,7 +79,7 @@ public class RegistroActivity extends AppCompatActivity {
         if(currentUser!=null){
             if(binding.checkBox.isChecked()){
                 Log.e("Activado", "currentUser es nulo");
-                Intent intent = new Intent(getBaseContext(), PerfilCoordinadorActivity.class);
+                Intent intent = new Intent(getBaseContext(), OpcionesSeguimiento.class);
                 intent.putExtra("user", currentUser.getDisplayName());
                 startActivity(intent);
             }else{

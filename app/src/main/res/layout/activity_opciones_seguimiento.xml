@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilCoordinadorActivity"
-    android:padding="10dp">
+    tools:context=".OpcionesSeguimiento"
+    android:padding="10dp"
+    android:background="@drawable/bk">
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Perfil"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Seguimiento activo del empleado"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,20 +43,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Empleado"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Coordinador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/nombretxt" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/nombretxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nombre"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="Nombre"
         android:textAllCaps="false"
         android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,49 +83,53 @@
             android:padding="20dp">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/seguimientoBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_boton"
-                android:drawableStart="@drawable/baseline_chat"
+                android:drawableStart="@drawable/baseline_navigation"
+                android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
-                android:text="Chat con coordinador"
+                android:text="Seguimiento empleado"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/tareaBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_bold"
                 android:background="@drawable/bg_boton"
-                android:drawableStart="@drawable/baseline_task"
+                android:drawableStart="@drawable/baseline_add_task"
                 android:paddingHorizontal="20dp"
-                android:text="Lista de tareas"
+                android:text="Asignar tareas"
                 android:textAllCaps="false" />
 
 
             <Button
 
-                android:id="@+id/button3"
+                android:id="@+id/solicitudBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/roboto_bold"
                 android:background="@drawable/bg_boton"
                 android:drawableStart="@drawable/baseline_permission"
                 android:paddingHorizontal="20dp"
-                android:text="Tramite de permiso"
+                android:text="Validar solicitudes"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/llegadBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_boton"
-                android:drawableStart="@drawable/baseline_permission"
+                android:fontFamily="@font/roboto_bold"
+                android:drawableStart="@drawable/baseline_stars_24"
                 android:paddingHorizontal="20dp"
-                android:text="Tramite de permiso"
+                android:text="Validar llegada"
                 android:textAllCaps="false" />
 
         </LinearLayout>

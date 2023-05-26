@@ -9,7 +9,6 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -119,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
         if(currentUser!=null){
             if(binding.checkBox.isChecked()){
                 Log.e("activado", "currentUser es nulo");
-                Intent intent = new Intent(getBaseContext(), PerfilCoordinadorActivity.class);
+                Intent intent = new Intent(getBaseContext(), OpcionesSeguimiento.class);
                 intent.putExtra("user", currentUser.getDisplayName());
                 startActivity(intent);
             }else{
