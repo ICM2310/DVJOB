@@ -261,7 +261,7 @@ public class RegistroActivity extends AppCompatActivity {
         if(currentUser!=null){
             if(binding.checkBox.isChecked()){
                 Log.e("Activado", "currentUser es nulo");
-                Intent intent = new Intent(getBaseContext(), OpcionesSeguimiento.class);
+                Intent intent = new Intent(getBaseContext(), PerfilCoordinador1.class);
                 intent.putExtra("user", currentUser.getDisplayName());
                 startActivity(intent);
             }else{

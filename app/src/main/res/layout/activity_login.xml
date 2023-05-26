@@ -87,12 +87,6 @@
                 android:hint="Ingresa tu contraseña"
                 android:inputType="textPassword" />
 
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Iniciar sesión como coordinador"
-                />
 
             <Button
                 android:id="@+id/iniciar_sesion"

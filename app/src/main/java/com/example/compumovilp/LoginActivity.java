@@ -22,6 +22,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.concurrent.Executor;
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
@@ -89,7 +95,9 @@ public class LoginActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+        if (currentUser != null) {
+            updateUI(currentUser);
+        }
         binding.iniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,24 +119,47 @@ public class LoginActivity extends AppCompatActivity {
         binding.registro.setText(spannableString);
         binding.registro.setMovementMethod(LinkMovementMethod.getInstance());
     }
-    private void updateUI(FirebaseUser currentUser){
-        if(currentUser!=null){
-            if(binding.checkBox.isChecked()){
-                Log.e("activado", "currentUser es nulo");
-                Intent intent = new Intent(getBaseContext(), OpcionesSeguimiento.class);
-                intent.putExtra("user", currentUser.getDisplayName());
-                startActivity(intent);
-            }else{
-                Log.e("desactivasvo", "textobox es nulo");
-                Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
-                intent.putExtra("user", currentUser.getDisplayName());
-                startActivity(intent);
-            }
+
+
+    private void updateUI(FirebaseUser currentUser) {
+        if (currentUser != null) {
+            String userId = currentUser.getUid();
+            DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
+
+            userRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        User user = dataSnapshot.getValue(User.class);
+
+                        int roll = user.getRoll();
+
+                        if (roll == 1) {
+                            // El usuario es un coordinador
+                            Intent intent = new Intent(getBaseContext(), PerfilCoordinador1.class);
+                            intent.putExtra("user", currentUser.getDisplayName());
+                            startActivity(intent);
+                            finish();  // Opcional: para cerrar la actividad actual
+                        } else {
+                            // El usuario es un empleado
+                            Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
+                            intent.putExtra("user", currentUser.getDisplayName());
+                            startActivity(intent);
+                            finish();  // Opcional: para cerrar la actividad actual
+                        }
+                    }
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    // Manejar posibles errores
+                }
+            });
         } else {
             binding.usuarioIn.setText("");
             binding.contraIn.setText("");
         }
     }
+
     private void sigin(){
         mAuth.signInWithEmailAndPassword(binding.usuarioIn.getText().toString().trim(), binding.contraIn.getText().toString().trim()).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override

@@ -95,13 +95,12 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_boton"
                 android:drawableTop="@drawable/baseline_supervisor"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
                 android:paddingTop="16dp"
-                android:drawablePadding="8dp"
                 android:text="Lista de empleados"
-                android:textAllCaps="false"
-                android:textSize="20sp" />
+                android:textAllCaps="false" />
 
 
             <Button
@@ -113,13 +112,12 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_boton"
                 android:drawableTop="@drawable/baseline_supervisor"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
                 android:paddingTop="16dp"
-                android:drawablePadding="8dp"
                 android:text="Lista de empleados"
-                android:textAllCaps="false"
-                android:textSize="20sp" />
+                android:textAllCaps="false" />
 
         </LinearLayout>
     </ScrollView>
