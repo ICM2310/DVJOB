@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroActivity">
+    tools:context=".RegistroActivity"
+    android:background="@drawable/bk"
+    >
 
     <ScrollView
         android:layout_width="404dp"
@@ -22,7 +24,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            >
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -124,6 +128,49 @@
                 android:hint="Introduce tu email"
                 android:inputType="textEmailAddress" />
 
+            <ImageView
+                android:id="@+id/imageGalelry"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/imageBton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Galeria"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/bg_boton"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/camBton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="Camara"
+                    android:fontFamily="@font/roboto_bold"
+                    android:background="@drawable/bg_boton"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
@@ -158,14 +205,17 @@
                 android:layout_marginTop="8dp"
                 android:text="Estoy de acuerdo con las politicas y condiciones  de tratamiento de datos" />
 
+
             <Button
                 android:id="@+id/reg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:backgroundTint="#3DBB02"
+                android:layout_marginTop="24dp"
                 android:text="Registrese"
-                android:textSize="17sp" />
+                android:fontFamily="@font/roboto_bold"
+                android:background="@drawable/bg_boton"
+                android:textAllCaps="false"
+                />
         </LinearLayout>
     </ScrollView>
 

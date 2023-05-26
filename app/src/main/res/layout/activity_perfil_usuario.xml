@@ -94,7 +94,6 @@
                 android:drawableStart="@drawable/baseline_chat"
                 android:paddingHorizontal="20dp"
                 android:fontFamily="@font/roboto_bold"
-
                 android:text="Chat con coordinador"
                 android:textAllCaps="false"/>
 

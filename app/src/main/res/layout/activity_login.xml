@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/bk">
 
 
     <ScrollView
@@ -98,9 +99,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:backgroundTint="#3DBB02"
-                android:text="Iniciar Sesión"
-                android:textSize="17sp" />
+                android:text="Iniciar Sesion"
+                android:fontFamily="@font/roboto_bold"
+                android:background="@drawable/bg_boton"
+                android:textAllCaps="false"
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -123,20 +126,17 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="0.9"
                     android:text="Registrarse"
+                    android:textColor="#000000"
                     android:textAlignment="center"
-                    android:textColor="#3DBB02"
                     android:textSize="15sp" />
 
             </LinearLayout>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/huella"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="32dp"
-                android:background="#FFFFFF"
-                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/huella"
                 android:contentDescription="Botón para acceder con huella"/>
 
