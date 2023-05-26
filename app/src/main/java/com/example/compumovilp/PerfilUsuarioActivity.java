@@ -24,24 +24,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
 
-        binding.solicitudFincaUsuarioBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), SolicitarUsuario.class);
-                startActivity(intent);
-            }
-        });
 
-
-        binding.logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signOut();
-                Intent intent = new Intent(view.getContext(), LoginActivity.class);
-                startActivity(intent);
-
-            }
-        });
 
     }
 }
