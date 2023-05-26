@@ -94,26 +94,33 @@
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_boton"
-                android:drawableStart="@drawable/baseline_supervisor"
-                android:paddingHorizontal="20dp"
-                android:text="Lista de empleados"
+                android:drawableTop="@drawable/baseline_supervisor"
                 android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:drawablePadding="8dp"
+                android:text="Lista de empleados"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
 
-                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/chatBtn2"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_boton"
-                android:drawableStart="@drawable/baseline_supervisor"
-                android:paddingHorizontal="20dp"
-                android:text="Lista de empleados"
+                android:drawableTop="@drawable/baseline_supervisor"
                 android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:drawablePadding="8dp"
+                android:text="Lista de empleados"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
 
-                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

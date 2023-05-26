@@ -24,19 +24,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import java.util.concurrent.Executor;
 public class LoginActivity extends AppCompatActivity {
-
     private ActivityLoginBinding binding;
     private FirebaseAuth mAuth;
     private static final String TAG = "lOGIN";
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
-
     @Override
     protected void onResume() {
         super.onResume();
         mAuth.signOut();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

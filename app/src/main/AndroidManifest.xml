@@ -23,9 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CompuMovilP"
         tools:targetApi="31">
-        <!-- <activity
+        <activity
              android:name=".PerfilCoordinador1"
-             android:exported="false" />-->
+             android:exported="false" />
          <activity
              android:name=".Evidencia_DetallesCoordinador"
              android:exported="false" />
@@ -35,13 +35,16 @@
          <activity
              android:name=".SolicitudFincaCoordinador"
              android:exported="false" />
-         <!--
+
  <activity
              android:name=".OpcionesSeguimiento"
              android:exported="false" />
-         -->
+
         <activity
             android:name=".SolicitarUsuario"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilUsuarioActivity"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"
@@ -73,7 +76,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
