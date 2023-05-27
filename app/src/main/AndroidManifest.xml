@@ -44,7 +44,7 @@
             android:name=".SolicitarUsuario"
             android:exported="false" />
         <activity
-            android:name=".PerfilUsuarioActivity"
+            android:name=".PerfilUsuario"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"

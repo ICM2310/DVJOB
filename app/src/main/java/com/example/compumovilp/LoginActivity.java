@@ -35,18 +35,20 @@ public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "lOGIN";
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mAuth.signOut();
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
         mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            updateUI(currentUser);
+        }
 
 
         // Configurar BiometricPrompt
@@ -137,13 +139,11 @@ public class LoginActivity extends AppCompatActivity {
                         if (roll == 1) {
                             // El usuario es un coordinador
                             Intent intent = new Intent(getBaseContext(), PerfilCoordinador1.class);
-                            intent.putExtra("user", currentUser.getDisplayName());
                             startActivity(intent);
                             finish();  // Opcional: para cerrar la actividad actual
                         } else {
                             // El usuario es un empleado
-                            Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
-                            intent.putExtra("user", currentUser.getDisplayName());
+                            Intent intent = new Intent(getBaseContext(), PerfilUsuario.class);
                             startActivity(intent);
                             finish();  // Opcional: para cerrar la actividad actual
                         }

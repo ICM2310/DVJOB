@@ -266,7 +266,7 @@ public class RegistroActivity extends AppCompatActivity {
                 startActivity(intent);
             }else{
                 Log.e("Desactivado", "textobox es nulo");
-                Intent intent = new Intent(getBaseContext(), PerfilUsuarioActivity.class);
+                Intent intent = new Intent(getBaseContext(), PerfilUsuario.class);
                 intent.putExtra("user", currentUser.getDisplayName());
                 startActivity(intent);
             }

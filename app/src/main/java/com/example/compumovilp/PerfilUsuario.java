@@ -1,21 +1,16 @@
 package com.example.compumovilp;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.compumovilp.databinding.ActivityPerfilCoordinador1Binding;
-import com.example.compumovilp.databinding.ActivityRegistroBinding;
+import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -24,21 +19,21 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class PerfilCoordinador1 extends AppCompatActivity {
-    private ActivityPerfilCoordinador1Binding binding;
-    public static final String PATH_USERS="users/";
+public class PerfilUsuario extends AppCompatActivity {
+
+    private ActivityPerfilUsuarioBinding binding;
     private FirebaseAuth mAuth;
+    public static final String PATH_USERS="users/";
     FirebaseDatabase database;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPerfilCoordinador1Binding.inflate(getLayoutInflater());
+        binding = ActivityPerfilUsuarioBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
+
         database = FirebaseDatabase.getInstance();
 
         //Obtener el usuario y la imagen de perfil de la base de datos
@@ -71,8 +66,9 @@ public class PerfilCoordinador1 extends AppCompatActivity {
 
     }
 
-    //Menu
 
+
+    //Inflate del menú
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menuLogOut:
