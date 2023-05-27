@@ -67,6 +67,14 @@ public class PerfilCoordinador1 extends AppCompatActivity {
             }
         });
 
+        binding.listaEmpleadosBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), listaEmpleados.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

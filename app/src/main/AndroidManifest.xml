@@ -33,7 +33,7 @@
              android:name=".AtenderSolicitudCoordinador"
              android:exported="false" />
          <activity
-             android:name=".SolicitudFincaCoordinador"
+             android:name=".listaEmpleados"
              android:exported="false" />
 
  <activity

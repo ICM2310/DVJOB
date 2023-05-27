@@ -16,7 +16,7 @@
         android:layout_marginTop="4dp"
         android:text="Perfil"
         android:textColor="#221919"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="@font/robotolight"
 
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -49,7 +49,7 @@
         android:layout_marginTop="8dp"
         android:text="Roll: Empleado"
         android:textColor="#221919"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="@font/robotolight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +90,7 @@
             android:orientation="vertical"
             android:padding="20dp">
             <Button
-                android:id="@+id/chatBtn"
+                android:id="@+id/listaEmpleadosBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"

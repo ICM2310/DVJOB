@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="@font/roboto_black"
+        android:fontFamily="@font/robotolight"
         android:text="Perfil"
 
         android:textColor="#221919"
@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto_black"
+        android:fontFamily="@font/robotolight"
         android:text="Roll: Coordinador"
         android:textColor="#221919"
 
@@ -60,13 +60,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/roboto_black"
+        android:fontFamily="@font/roboto_bold"
         android:text="Nombre"
         android:textAllCaps="false"
         android:textSize="25sp"
-        android:textStyle="bold"
         android:textColor="#221919"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +89,7 @@
             android:padding="20dp">
 
             <Button
-                android:id="@+id/chatBtn"
+                android:id="@+id/listaEmpleadosBtn"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginRight="5dp"
@@ -124,7 +122,25 @@
                 android:textAllCaps="false" />
 
         </LinearLayout>
+
+
     </ScrollView>
+
+    <TextView
+        android:id="@+id/descripcionRol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Como coordinador, tu rol es supervisar y gestionar las actividades del equipo."
+        android:fontFamily="@font/robotolight"
+
+        android:textAlignment="center"
+        android:textColor="#221919"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.234" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
