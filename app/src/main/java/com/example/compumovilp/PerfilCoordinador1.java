@@ -99,9 +99,6 @@ public class PerfilCoordinador1 extends AppCompatActivity {
                         }
                     });
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,8 +114,18 @@ public class PerfilCoordinador1 extends AppCompatActivity {
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         //Obtener el usuario y la imagen de perfil de la base de datos
         FirebaseUser user = mAuth.getCurrentUser();
+
+        //Loclizacion en segundo plano
+        Intent intent = new Intent(PerfilCoordinador1.this, ServicioLocalizacion.class);
+        //assert user != null;
+        intent.putExtra("USER_ID", user.getUid());
+        Log.d("USERID", "PerfilCoordinador: " + user.getUid() + ", Foto de perfil: " );
+        startService(intent);
+        ////
         DatabaseReference myRef = database.getReference(PATH_USERS + user.getUid());
         ubicacionRef = database.getReference("ubicacion").child(user.getUid());
+
+        //Carga de imagen y clase ubicacion
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -149,19 +156,13 @@ public class PerfilCoordinador1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         mLocationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
                 Location location = locationResult.getLastLocation();
                 Log.i("LOCATION", "Location update in the callback: " + location);
-                if (location != null) {
-                    //binding.latitud.setText(String.valueOf(location.getLatitude()));
-                    //binding.longitd.setText(String.valueOf(location.getLongitude()));
-                }
             }
         };
-
     }
     @Override
     public void onStart() {

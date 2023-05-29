@@ -150,6 +150,10 @@ public class RegistroActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
+
+
+
+
         binding.imageBton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -17,8 +17,6 @@ public class User {
         return roll;
     }
 
-
-
     public String getLongitud() {
         return longitud;
     }
