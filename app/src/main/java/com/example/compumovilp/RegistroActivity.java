@@ -69,22 +69,17 @@ public class RegistroActivity extends AppCompatActivity {
     FirebaseStorage storage = FirebaseStorage.getInstance();
     StorageReference storageRef = storage.getReference();
     DatabaseReference myRef;
-
-
     private Boolean settingsOK;
-
     private FusedLocationProviderClient mFusedLocationClient;
     private LocationRequest mLocationRequest;
     private LocationCallback mLocationCallback;
 
     private InputStream stream;
-
     Uri fUri;
 
     public static final String PATH_USERS="users/";
     String currentLongitud ="";
     String currentLatitud;
-
 
 
     private Uri uriCamera;
@@ -143,8 +138,6 @@ public class RegistroActivity extends AppCompatActivity {
                             }
                         }
                     });
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
