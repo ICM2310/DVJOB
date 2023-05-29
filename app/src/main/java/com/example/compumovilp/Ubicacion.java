@@ -4,13 +4,28 @@ public class Ubicacion {
 
     private double latitude;
     private double longitude;
-    private String name;
 
-    public Ubicacion(double latitude, double longitude, String name) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.name = name;
+    public int getRoll() {
+        return roll;
     }
+
+    public void setRoll(int roll) {
+        this.roll = roll;
+    }
+
+    private int roll;
+
+
+    public String getuID() {
+        return uID;
+    }
+
+    public void setuID(String uID) {
+        this.uID = uID;
+    }
+
+    private String uID;
+
 
     public double getLatitude() {
         return latitude;
@@ -28,13 +43,9 @@ public class Ubicacion {
         this.longitude = longitude;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+
+
 }
 
 

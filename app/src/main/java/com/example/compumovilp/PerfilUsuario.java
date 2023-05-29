@@ -73,7 +73,6 @@ public class PerfilUsuario extends AppCompatActivity {
     }
 
 
-
     //Inflate del menú
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
