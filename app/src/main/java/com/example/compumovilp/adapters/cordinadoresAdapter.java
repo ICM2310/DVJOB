@@ -14,6 +14,8 @@ package com.example.compumovilp.adapters;
         import com.example.compumovilp.R;
         import com.example.compumovilp.User;
         import com.example.compumovilp.chat;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
 
         import java.util.List;
 
@@ -21,6 +23,7 @@ public class cordinadoresAdapter extends ArrayAdapter<User> {
     private Context mContext;
     private int mLayoutResourceId;
     private List<User> mUsers;
+    private FirebaseAuth mAuth;
     public cordinadoresAdapter(Context context, int layoutResourceId, List<User> users) {
         super(context, layoutResourceId, users);
         mContext = context;
@@ -33,7 +36,8 @@ public class cordinadoresAdapter extends ArrayAdapter<User> {
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.contactsrow, parent, false);
         }
-
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser usera = mAuth.getCurrentUser();
         User user = mUsers.get(position);
 
         ImageView profileImageView = convertView.findViewById(R.id.profileImage);
@@ -50,7 +54,9 @@ public class cordinadoresAdapter extends ArrayAdapter<User> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, chat.class);
-                intent.putExtra("USER_ID", user.getUserID()); // agrega el userid como un extra
+                intent.putExtra("COORD_ID", user.getUserID());
+                intent.putExtra("real", user.getUserID());
+                intent.putExtra("USER_ID", usera.getUid());// agrega el userid como un extra
                 mContext.startActivity(intent);
             }
         });

@@ -49,7 +49,9 @@ public class chat extends AppCompatActivity {
     private DatabaseReference ref;
     private DatabaseReference myRef;
     private String userId;
-    String sala="chat";
+    private String coordId;
+    private String real;
+    private String nuevonom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +59,6 @@ public class chat extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        adapter = new AdapterMensajes(this);
         database = FirebaseDatabase.getInstance();
         fotoPerfil = (ImageView) findViewById(R.id.fotoPerfil);
         nombre = (TextView) findViewById(R.id.nombre);
@@ -67,22 +68,23 @@ public class chat extends AppCompatActivity {
 
 
         userId = getIntent().getStringExtra("USER_ID");
-        myRef = database.getReference(PATH_USERS + user.getUid());
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        coordId = getIntent().getStringExtra("COORD_ID");
+        real = getIntent().getStringExtra("real");
+        if (real != null) {
+            ref = FirebaseDatabase.getInstance().getReference().child("users").child(real);
+            // rest of the code that uses the ref object
+        } else {
+            Log.e("OpcionesSeguimiento", "USER_ID extra not provided in intent");
+        }
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     User myUser = dataSnapshot.getValue(User.class);
                     nombre.setText(myUser.getName());
-                    fotoPerfilCadena = myUser.getProfileImageURL();
                     Glide.with(getApplicationContext())
                             .load(myUser.getProfileImageURL())
                             .into(fotoPerfil);
-                    if(myUser.getRoll()==1){
-                        sala = myUser.getUserID()+userId;
-                    }else if(myUser.getRoll()==0){
-                        sala = userId+myUser.getUserID();
-                    }
                 } else {
                 }
             }
@@ -90,9 +92,25 @@ public class chat extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-
+        myRef = database.getReference(PATH_USERS + user.getUid());
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    User myUser = dataSnapshot.getValue(User.class);
+                    fotoPerfilCadena = myUser.getProfileImageURL();
+                    nuevonom = myUser.getName();
+                } else {
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+        String sala = coordId+userId;
         databaseReference = database.getReference(sala);
 
+        adapter = new AdapterMensajes(this);
         LinearLayoutManager l = new LinearLayoutManager(this);
         rvMensajes.setLayoutManager(l);
         rvMensajes.setAdapter(adapter);
@@ -100,7 +118,7 @@ public class chat extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                databaseReference.push().setValue(new MensajeEnviar(txtMensaje.getText().toString(),nombre.getText().toString(),fotoPerfilCadena,"1", ServerValue.TIMESTAMP));
+                databaseReference.push().setValue(new MensajeEnviar(txtMensaje.getText().toString(),nuevonom,fotoPerfilCadena,"1", ServerValue.TIMESTAMP));
                 txtMensaje.setText("");
             }
         });

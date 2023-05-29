@@ -1,6 +1,7 @@
 package com.example.compumovilp.adapters;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,11 @@ public class AdapterMensajes extends RecyclerView.Adapter<HolderMensaje> {
         holder.getNombre().setText(listMensaje.get(position).getNombre());
         holder.getMensaje().setText(listMensaje.get(position).getMensaje());
         Long codigoHora = listMensaje.get(position).getHora();
+        if(listMensaje.get(position).getFotoPerfil().isEmpty()){
+            holder.getFotoMensajePerfil().setImageResource(R.mipmap.ic_launcher);
+        }else{
+            Glide.with(c).load(listMensaje.get(position).getFotoPerfil()).into(holder.getFotoMensajePerfil());
+        }
         Date d = new Date(codigoHora);
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");//a pm o am
         holder.getHora().setText(sdf.format(d));

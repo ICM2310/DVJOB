@@ -14,6 +14,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,7 +37,7 @@ public class OpcionesSeguimiento extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
         mAuth = FirebaseAuth.getInstance();
-
+        FirebaseUser user = mAuth.getCurrentUser();
         userId = getIntent().getStringExtra("USER_ID");
         Log.d("UserID", "ID: " + userId  );
         mAuth = FirebaseAuth.getInstance();
@@ -74,6 +75,8 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), chat.class);
                 intent.putExtra("USER_ID", userId);
+                intent.putExtra("real", userId);
+                intent.putExtra("COORD_ID", user.getUid());
                 startActivity(intent);
             }
         });
