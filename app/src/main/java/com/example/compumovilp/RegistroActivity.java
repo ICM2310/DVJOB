@@ -218,8 +218,6 @@ public class RegistroActivity extends AppCompatActivity {
                         User myUser = new User();
                         myUser.setName(binding.nombreReg.getText().toString() +" "+binding.apellidoReg.getText().toString());
                         myUser.setEmail(binding.emailReg.getText().toString());
-                        myUser.setLongitud(currentLongitud );
-                        myUser.setLatitude(currentLatitud);
 
                         if(binding.checkBox.isChecked()){
                             myUser.setRoll(1);

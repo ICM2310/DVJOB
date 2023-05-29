@@ -86,7 +86,6 @@ public class listaEmpleados extends AppCompatActivity {
 
     }
 
-
     //Menu
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {

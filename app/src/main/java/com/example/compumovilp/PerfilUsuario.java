@@ -86,7 +86,6 @@ public class PerfilUsuario extends AppCompatActivity {
                             }
                         }
                     });
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -184,7 +183,6 @@ public class PerfilUsuario extends AppCompatActivity {
         ubicacion.setuID(user.getUid());
         ubicacion.setLatitude(0);
         ubicacion.setLongitude(0);
-        ubicacion.setRoll(0);
         ubicacionRef.setValue(ubicacion);
     }
     private LocationRequest createLocationRequest(){

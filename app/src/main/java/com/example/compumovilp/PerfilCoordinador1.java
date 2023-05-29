@@ -195,7 +195,6 @@ public class PerfilCoordinador1 extends AppCompatActivity {
         ubicacion.setuID(user.getUid());
         ubicacion.setLatitude(0);
         ubicacion.setLongitude(0);
-        ubicacion.setRoll(1);
         ubicacionRef.setValue(ubicacion);
     }
     private LocationRequest createLocationRequest(){

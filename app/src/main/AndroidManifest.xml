@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-
     <uses-feature
         android:name="android.hardware.nfc"
         android:required="true" />
@@ -26,6 +25,9 @@
         android:theme="@style/Theme.CompuMovilP"
         tools:targetApi="31">
         <activity
+            android:name=".UbicacionTiempoRealEmpleado"
+            android:exported="false" />
+        <activity
             android:name=".chat"
             android:exported="false" />
         <activity
@@ -35,19 +37,10 @@
             android:name=".PerfilCoordinador1"
             android:exported="false" />
         <activity
-            android:name=".Evidencia_DetallesCoordinador"
-            android:exported="false" />
-        <activity
-            android:name=".AtenderSolicitudCoordinador"
-            android:exported="false" />
-        <activity
             android:name=".listaEmpleados"
             android:exported="false" />
         <activity
             android:name=".OpcionesSeguimiento"
-            android:exported="false" />
-        <activity
-            android:name=".SolicitarUsuario"
             android:exported="false" />
         <activity
             android:name=".PerfilUsuario"
@@ -58,6 +51,7 @@
         <activity
             android:name=".NFCActivity"
             android:exported="false" />
+
         <service
             android:name=".ServicioLocalizacion"
             android:stopWithTask="false" />
@@ -74,12 +68,8 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyBiyW3ntBllGhTpFiMIaeiv6HRpK_kNVsE" />
 
-        <activity
-            android:name=".MapActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

@@ -5,17 +5,6 @@ public class Ubicacion {
     private double latitude;
     private double longitude;
 
-    public int getRoll() {
-        return roll;
-    }
-
-    public void setRoll(int roll) {
-        this.roll = roll;
-    }
-
-    private int roll;
-
-
     public String getuID() {
         return uID;
     }

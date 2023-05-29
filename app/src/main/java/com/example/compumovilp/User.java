@@ -3,8 +3,6 @@ package com.example.compumovilp;
 public class User {
     private String name;
     private String email;
-    private String longitud;
-    private String latitude;
     private String userID;
     private String profileImageURL;
     private int roll; //1 coordinador //0 usuario
@@ -17,13 +15,7 @@ public class User {
         return roll;
     }
 
-    public String getLongitud() {
-        return longitud;
-    }
 
-    public void setLongitud(String longitud) {
-        this.longitud = longitud;
-    }
 
 
     public String getUserID() {
@@ -49,13 +41,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
     }
     public String getProfileImageURL() {
         return profileImageURL;

@@ -1,10 +1,13 @@
 package com.example.compumovilp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -48,12 +51,15 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             Log.e("OpcionesSeguimiento", "USER_ID extra not provided in intent");
         }
 
+        final String[] empleadoName = {""};
+
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     User myUser = dataSnapshot.getValue(User.class);
                     binding.nombretxt.setText("Seguimiento a " + myUser.getName());
+                    empleadoName[0] =  myUser.getName();
 
                     // Carga la imagen utilizando Glide
                     Glide.with(getApplicationContext())
@@ -70,6 +76,8 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             }
         });
 
+        //Opcion de chat
+
         binding.chatcord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,5 +89,35 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             }
         });
 
+        //Opcion de seguimiento en tiempo real del empleado
+
+        binding.seguimientoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), UbicacionTiempoRealEmpleado.class);
+                intent.putExtra("USER_ID", userId); // agrega el userid como un extra
+                intent.putExtra("USERNAME",empleadoName[0]);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    //Menu
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuLogOut:
+                mAuth.signOut();
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }
