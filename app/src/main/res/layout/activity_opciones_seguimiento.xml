@@ -88,6 +88,18 @@
             android:padding="20dp">
 
             <Button
+                android:id="@+id/chatcord"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_boton"
+                android:drawableStart="@drawable/baseline_chat"
+                android:paddingHorizontal="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Chat con el empleado"
+                android:textAllCaps="false"/>
+
+            <Button
                 android:id="@+id/seguimientoBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
@@ -136,7 +148,6 @@
                 android:paddingHorizontal="20dp"
                 android:text="Validar llegada"
                 android:textAllCaps="false" />
-
         </LinearLayout>
 
     </ScrollView>

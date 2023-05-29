@@ -2,6 +2,7 @@ package com.example.compumovilp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -68,7 +69,14 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             }
         });
 
-
+        binding.chatcord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), chat.class);
+                intent.putExtra("USER_ID", userId);
+                startActivity(intent);
+            }
+        });
 
     }
 }

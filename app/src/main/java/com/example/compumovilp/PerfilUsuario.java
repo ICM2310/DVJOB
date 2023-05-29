@@ -62,7 +62,13 @@ public class PerfilUsuario extends AppCompatActivity {
             }
         });
 
-
+        binding.chatemp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), listaCordinadores.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

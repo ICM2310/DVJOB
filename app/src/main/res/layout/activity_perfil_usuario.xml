@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfilUsuario"
+    android:background="@drawable/bk"
     android:padding="10dp"
-    android:background="@drawable/bk">
+    tools:context=".PerfilUsuario">
 
 
     <TextView
@@ -14,9 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotolight"
         android:text="Perfil"
         android:textColor="#221919"
-        android:fontFamily="@font/robotolight"
 
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -47,9 +47,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/robotolight"
         android:text="Roll: Empleado"
         android:textColor="#221919"
-        android:fontFamily="@font/robotolight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,10 +60,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Nombre"
-        android:textColor="#221919"
         android:fontFamily="@font/roboto_bold"
+        android:text="Nombre"
         android:textAllCaps="false"
+        android:textColor="#221919"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,8 +80,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17"
-        app:layout_constraintVertical_bias="1.0"
-        >
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,17 +88,18 @@
             android:background="@drawable/bg_linearlayout"
             android:orientation="vertical"
             android:padding="20dp">
+
             <Button
-                android:id="@+id/listaEmpleadosBtn"
+                android:id="@+id/chatemp"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_boton"
                 android:drawableStart="@drawable/baseline_chat"
-                android:paddingHorizontal="20dp"
                 android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
                 android:text="Chat con coordinador"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/tareaBtn"
@@ -108,23 +108,23 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_boton"
                 android:drawableStart="@drawable/baseline_task"
-                android:paddingHorizontal="20dp"
                 android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
 
                 android:text="Lista de tareas"
-                android:textAllCaps="false"  />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/permisoBtn"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@drawable/bg_boton"
-                android:fontFamily="@font/roboto_bold"
-
                 android:drawableStart="@drawable/baseline_permission"
+
+                android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
                 android:text="Tramite de permiso"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
         </LinearLayout>
 
