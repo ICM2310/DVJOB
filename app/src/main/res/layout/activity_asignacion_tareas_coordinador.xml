@@ -54,23 +54,22 @@
                     />
 
                 <Spinner
-                    android:id="@+id/spinnerCategory"
+                    android:id="@+id/spinnerTarea"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_spinner_background"
                     android:hint="Tipo de solicitud"
-                    android:entries="@array/category_array"/>
+                    android:entries="@array/taks_array"/>
 
                 <TextView
-                    android:id="@+id/descripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Descripción"
                     android:fontFamily="@font/roboto_bold"
+                    android:text="Descripción"
                     android:textColor="#0024A2"
                     android:textSize="15sp" />
 

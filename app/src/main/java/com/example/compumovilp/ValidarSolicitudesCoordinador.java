@@ -43,7 +43,6 @@ public class ValidarSolicitudesCoordinador extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityValidarSolicitudesCoordinadorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        // ...
 
         userId = getIntent().getStringExtra("USER_ID");
         Log.d("USERKD","WWW"+userId);

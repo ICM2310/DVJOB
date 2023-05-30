@@ -110,6 +110,14 @@ public class OpcionesSeguimiento extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        binding.tareaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), AsignacionTareasCoordinador.class);
+                intent.putExtra("USER_ID", userId); // agrega el userid como un extra
+                startActivity(intent);
+            }
+        });
 
     }
 

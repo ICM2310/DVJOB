@@ -16,6 +16,13 @@
         <item>Capacitación y desarrollo</item>
     </string-array>
 
+    <string-array name="taks_array">
+        <item>Verificación de inventario</item>
+        <item>Atención al cliente</item>
+        <item>Redacción de informes</item>
+        <item>Mantenimiento y reparación</item>
+    </string-array>
+
 
     <string name="title_activity_main">MainActivity</string>
 
