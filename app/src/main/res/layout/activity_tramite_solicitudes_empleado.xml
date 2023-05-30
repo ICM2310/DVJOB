@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TramiteSolicitudesEmpleado"
+    android:background="@drawable/bk">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Crear una solicitud"
+        android:textColor="#221919"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre"
+                    android:textColor="#0024A2"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Nombre"
+                    android:textColor="#221919"
+                    android:fontFamily="@font/robotolight"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Fecha"
+                    android:textColor="#0024A2"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_bold"
+                    />
+
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="395dp"
+                    android:layout_marginBottom="10dp"
+                    android:calendarTextColor="#D81A1A"
+                    android:calendarViewShown="true"
+                    android:spinnersShown="true"
+                    android:yearListSelectorColor="#C51616"
+                    tools:calendarTextColor="#CC1414"
+                    tools:yearListSelectorColor="#A30202"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vertucakblancl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/roundcorner"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hora Inicio"
+                        android:textColor="#0024A2"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/roboto_bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hora Final"
+                        android:textColor="#0024A2"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/roboto_bold"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonNa5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="9:00"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/robotolight"
+                        />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonNam"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="19:00"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/robotolight"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Descripción"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="#0024A2"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="clip_horizontal|clip_vertical"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:fontFamily="@font/robotolight"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Categoría"
+                    android:textColor="#0024A2"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/custom_spinner_background"
+                    android:hint="Tipo de solicitud"
+                    android:entries="@array/category_array"/>
+
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/roboto_bold"
+
+                    android:background="@drawable/bg_boton"
+                    android:drawableStart="@drawable/baseline_permission"
+                    android:gravity="center|center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:text="Enviar"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

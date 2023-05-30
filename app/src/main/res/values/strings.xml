@@ -2,22 +2,6 @@
     <string name="app_name">CompuMovilP</string>
     <string name="title_activity_maps">MapsActivity</string>
 
-    <string-array name="Sedes">
-        <item>1.Mosquera</item>
-        <item>2.Bogotá</item>
-        <item>3.Chía</item>
-    </string-array>
-
-    <string-array name="tipoSolicitud">
-        <item>Caja de compensación</item>
-    </string-array>
-
-    <string-array name="Empresas">
-        <item>Elite Flowers</item>
-        <item>Fontanar</item>
-        <item>Flores la mana</item>
-    </string-array>
-
 
     <string-array name="TipoDocumento">
         <item>CC</item>
@@ -25,12 +9,18 @@
         <item>CE</item>
     </string-array>
 
-
-    <string-array name="CajasCompesacion">
-        <item>Cafam</item>
-        <item>Compensar</item>
-        <item>Colsubsidio</item>
+    <string-array name="category_array">
+        <item>Vacaciones</item>
+        <item>Licencia médica</item>
+        <item>Permiso personal</item>
+        <item>Reembolso de gastos</item>
+        <item>Capacitación y desarrollo</item>
+        <item>Cambio de turno</item>
+        <item>Cambio de puesto</item>
     </string-array>
+
+
+
     <string name="title_activity_main">MainActivity</string>
 
 </resources>

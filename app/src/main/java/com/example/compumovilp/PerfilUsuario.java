@@ -151,6 +151,15 @@ public class PerfilUsuario extends AppCompatActivity {
                 Log.i("LOCATION", "Location update in the callback: " + location);
             }
         };
+
+        binding.permisoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), TramiteSolicitudesEmpleado.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     //Inflate del menú

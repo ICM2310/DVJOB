@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="40dp"
         android:paddingLeft="40dp"
-        android:paddingRight="60dp"
+        android:paddingRight="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.302"
