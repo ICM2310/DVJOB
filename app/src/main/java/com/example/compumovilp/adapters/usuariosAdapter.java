@@ -20,6 +20,7 @@ public class usuariosAdapter extends ArrayAdapter<User> {
     private Context mContext;
     private int mLayoutResourceId;
     private List<User> mUsers;
+
     public usuariosAdapter(Context context, int layoutResourceId, List<User> users) {
         super(context, layoutResourceId, users);
         mContext = context;

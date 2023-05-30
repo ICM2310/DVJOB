@@ -9,6 +9,16 @@ public class Solicitud {
     private String categoria;
     private String descripcion;
 
+    public int getEstadoSolicitud() {
+        return estadoSolicitud;
+    }
+
+    public void setEstadoSolicitud(int estadoSolicitud) {
+        this.estadoSolicitud = estadoSolicitud;
+    }
+
+    private int estadoSolicitud; //0 en espera //1 aprobada //2 rechazada
+
     public String getID() {
         return ID;
     }

@@ -1,9 +1,12 @@
 package com.example.compumovilp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -37,11 +40,12 @@ public class TramiteSolicitudesEmpleado extends AppCompatActivity {
                 solicitud.setFecha(binding.datePicker.getDayOfMonth() +"/"+ binding.datePicker.getMonth() + "/" +binding.datePicker.getYear() );
                 solicitud.setHoraInicio(binding.horaInicio.getText().toString());
                 solicitud.setHoraFinal(binding.horaFinal.getText().toString());
+                solicitud.setEstadoSolicitud(0); //En espera
                 String categoriaSeleccionada = (String) binding.spinnerCategory.getSelectedItem();
                 solicitud.setCategoria(categoriaSeleccionada);
                 solicitud.setDescripcion(binding.descripcionTxt.getText().toString());
-                solicitud.setID(user.getUid());
                 String solicitudId = databaseReference.push().getKey();
+                solicitud.setID(solicitudId);
                 databaseReference.child(solicitudId).setValue(solicitud);
                 Toast.makeText(getApplicationContext(), "Solicitud enviada", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(TramiteSolicitudesEmpleado.this, TramiteSolicitudesEmpleado.class);
@@ -55,6 +59,24 @@ public class TramiteSolicitudesEmpleado extends AppCompatActivity {
             }
         });
 
+    }
+
+    //Menu
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuLogOut:
+                mAuth.signOut();
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
 }

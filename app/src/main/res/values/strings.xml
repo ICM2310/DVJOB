@@ -12,13 +12,9 @@
     <string-array name="category_array">
         <item>Vacaciones</item>
         <item>Licencia médica</item>
-        <item>Permiso personal</item>
         <item>Reembolso de gastos</item>
         <item>Capacitación y desarrollo</item>
-        <item>Cambio de turno</item>
-        <item>Cambio de puesto</item>
     </string-array>
-
 
 
     <string name="title_activity_main">MainActivity</string>

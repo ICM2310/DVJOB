@@ -25,6 +25,9 @@
         android:theme="@style/Theme.CompuMovilP"
         tools:targetApi="31">
         <activity
+            android:name=".ValidarSolicitudesCoordinador"
+            android:exported="false" />
+        <activity
             android:name=".TramiteSolicitudesEmpleado"
             android:exported="false" />
         <activity

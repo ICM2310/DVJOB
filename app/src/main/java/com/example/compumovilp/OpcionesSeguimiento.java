@@ -101,6 +101,16 @@ public class OpcionesSeguimiento extends AppCompatActivity {
             }
         });
 
+
+        binding.solicitudBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), ValidarSolicitudesCoordinador.class);
+                intent.putExtra("USER_ID", userId); // agrega el userid como un extra
+                startActivity(intent);
+            }
+        });
+
     }
 
     //Menu
