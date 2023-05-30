@@ -53,7 +53,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/nombrePersona"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -134,7 +134,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/editTextTextPersonNa5"
+                        android:id="@+id/horaInicio"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -144,7 +144,7 @@
                         />
 
                     <EditText
-                        android:id="@+id/editTextTextPersonNam"
+                        android:id="@+id/horaFinal"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -155,7 +155,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/descripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -166,7 +166,7 @@
                     android:textSize="15sp" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName5"
+                    android:id="@+id/descripcionTxt"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginBottom="10dp"
@@ -175,11 +175,12 @@
                     android:inputType="textPersonName"
                     android:padding="8dp"
                     android:fontFamily="@font/robotolight"
+                    android:hint="Descripcion"
                     />
 
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/categoria"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
