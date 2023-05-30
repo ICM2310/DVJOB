@@ -34,9 +34,7 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
     private int mLayoutResourceId;
     private List<Solicitud> mSolicitudes;
     private FirebaseAuth mAuth;
-
     private String PATH_SOLICITUDES ="solicitudEmpleado/";
-
     public solicitudesAdapter(Context context, int layoutResourceId, List<Solicitud> solicitudes,String userId) {
         super(context, layoutResourceId, solicitudes);
         mContext = context;
@@ -45,8 +43,6 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
         this.userId = userId;
 
     }
-
-
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
