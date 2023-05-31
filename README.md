@@ -31,16 +31,21 @@ Estudiante de ingenieria de sistemas de quinto semestre con conocimientos basico
 
 
 # Pantallas principales de su aplicacion
-![image](https://user-images.githubusercontent.com/62730462/232665653-cdfdc0ae-13ce-49e5-a5d6-789d629e3b04.png)
-![image](https://user-images.githubusercontent.com/62730462/232665718-87edaf92-fe5e-45b4-86b9-73816006347a.png)
-![image](https://user-images.githubusercontent.com/62730462/232665757-7e3d991e-c890-43f4-9cfb-4855058a7f06.png)
-![image](https://user-images.githubusercontent.com/62730462/232665781-1d272639-0551-4603-8629-d6e4053eff32.png)
-![image](https://user-images.githubusercontent.com/62730462/232665795-144c04f3-c622-4047-9775-602379121c75.png)
 
 
+![Inicio_de_sesion](https://github.com/ICM2310/DVJOB/assets/82338432/5100725b-a054-4f79-bf2b-043fec4faf54)
+![perfil_empleado](https://github.com/ICM2310/DVJOB/assets/82338432/3230fc4f-aa8c-4bb7-98d5-469a41521b23)
+![perfil_coordinador](https://github.com/ICM2310/DVJOB/assets/82338432/f4017d9b-a45e-419b-b357-d2c8998b04a8)
+![seguimiento_a_empleado](https://github.com/ICM2310/DVJOB/assets/82338432/fa5eb2f2-da3c-4853-8854-1b93ab21c2ef)
+![validar_solicitudes](https://github.com/ICM2310/DVJOB/assets/82338432/c3d1c0a4-cb5c-42b6-a6a4-7a1d434b74a7)
+![asignar_tareas](https://github.com/ICM2310/DVJOB/assets/82338432/8554003c-5c99-45a8-b39f-8d3c7cfad4b4)
+![chat](https://github.com/ICM2310/DVJOB/assets/82338432/826d914d-4aac-4159-8b74-90c25b7a96c5)
+![lista_empleados](https://github.com/ICM2310/DVJOB/assets/82338432/8a78117c-f77f-4915-866c-11270cbc7bec)
+![lista_tareas](https://github.com/ICM2310/DVJOB/assets/82338432/7321c258-f7a1-4806-9cfc-3491c63f4818)
+![mapa_seguimiento_empleado](https://github.com/ICM2310/DVJOB/assets/82338432/78fc4cee-ea69-4dab-8df9-ee53ad4b58cf)
+![tarea](https://github.com/ICM2310/DVJOB/assets/82338432/d0ecfee7-3467-42ba-9952-69a5976cee38)
+![tramitar_solicitudes1](https://github.com/ICM2310/DVJOB/assets/82338432/9dda4258-2572-435b-9cf9-8da1871a4f27)
+![tramitar_solicitudes2](https://github.com/ICM2310/DVJOB/assets/82338432/83e1bcb2-ba75-4f8a-b16b-4c847a30129e)
 
-
-
-  
  
 
