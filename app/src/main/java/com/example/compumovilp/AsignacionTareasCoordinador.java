@@ -10,23 +10,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.compumovilp.adapters.Tarea;
-import com.example.compumovilp.api.EmpleadoApi;
 import com.example.compumovilp.databinding.ActivityAsignacionTareasCoordinadorBinding;
-import com.example.compumovilp.databinding.ActivityTramiteSolicitudesEmpleadoBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class AsignacionTareasCoordinador extends AppCompatActivity {
 
-    EmpleadoApi empleadoApi = RetrofitClient.getRetrofitInstance().create(EmpleadoApi.class);
     private ActivityAsignacionTareasCoordinadorBinding binding;
     private FirebaseAuth mAuth;
 
@@ -56,27 +48,11 @@ public class AsignacionTareasCoordinador extends AppCompatActivity {
                 tarea.setFechaVencimiento(binding.datePicker.getDayOfMonth() +"/"+ binding.datePicker.getMonth() + "/" +binding.datePicker.getYear() );
                 String solicitudId = databaseReference.push().getKey();
                 tarea.setId(solicitudId);
-
-                // Envía la tarea al servidor REST.
-                Call<Tarea> call = empleadoApi.createTask(tarea);
-                call.enqueue(new Callback<Tarea>() {
-                    @Override
-                    public void onResponse(Call<Tarea> call, Response<Tarea> response) {
-                        if (!response.isSuccessful()) {
-                            Log.e("Error", "Hubo un error en la petición");
-                            return;
-                        }
-                        Toast.makeText(getApplicationContext(), "Tarea Asignada", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(AsignacionTareasCoordinador.this, AsignacionTareasCoordinador.class);
-                        intent.putExtra("USER_ID",empleadoUserId);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onFailure(Call<Tarea> call, Throwable t) {
-                        Log.e("Error", "Hubo un error en la petición");
-                    }
-                });
+                databaseReference.child(solicitudId).setValue(tarea);
+                Toast.makeText(getApplicationContext(), "Tarea Asignada", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AsignacionTareasCoordinador.this, AsignacionTareasCoordinador.class);
+                intent.putExtra("USER_ID",empleadoUserId);
+                startActivity(intent);
             }
         });
     }
@@ -98,5 +74,4 @@ public class AsignacionTareasCoordinador extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
-
 }

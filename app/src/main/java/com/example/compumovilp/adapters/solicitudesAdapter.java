@@ -3,7 +3,6 @@ package com.example.compumovilp.adapters;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +14,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.compumovilp.OpcionesSeguimiento;
 import com.example.compumovilp.R;
 import com.example.compumovilp.Solicitud;
-import com.example.compumovilp.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -90,21 +87,19 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
         // Crea un Dialog personalizado para mostrar los detalles de la solicitud
         Dialog dialog = new Dialog(mContext);
         dialog.setContentView(R.layout.dialog_solicitud);
-        TextView textViewFecha = dialog.findViewById(R.id.textViewFecha);
-        TextView textViewCategoria = dialog.findViewById(R.id.textViewCategoria);
+        TextView textViewFecha = dialog.findViewById(R.id.fechavencimiento);
+        TextView textViewCategoria = dialog.findViewById(R.id.tipotarea);
         TextView textViewDescripcion = dialog.findViewById(R.id.textViewDescripcion);
-        TextView textViewHoraInicio = dialog.findViewById(R.id.textViewHoraInicio);
+        TextView textViewHoraInicio = dialog.findViewById(R.id.descripcion1);
         TextView textViewHoraFinal = dialog.findViewById(R.id.textViewHoraFinal);
         ImageView imgAceptado = dialog.findViewById(R.id.imgAceptado);
         ImageView imgRechazado = dialog.findViewById(R.id.imgRechazado);
-
         // Establece los valores de los TextViews con los detalles de la solicitud
         textViewCategoria.setText(solicitud.getCategoria());
         textViewDescripcion.setText("Descripción: "+solicitud.getDescripcion());
         textViewFecha.setText("Fecha: " + solicitud.getFecha());
         textViewHoraInicio.setText("Hora de inicio: " + solicitud.getHoraInicio());
         textViewHoraFinal.setText("Hora de finalización: " + solicitud.getHoraFinal());
-
         imgAceptado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

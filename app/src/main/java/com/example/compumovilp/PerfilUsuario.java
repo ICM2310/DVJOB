@@ -160,6 +160,15 @@ public class PerfilUsuario extends AppCompatActivity {
             }
         });
 
+        binding.tareaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), listaTareasEmpleado1.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     //Inflate del menú

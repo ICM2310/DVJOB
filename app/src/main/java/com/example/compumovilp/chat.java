@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,9 +20,6 @@ import com.bumptech.glide.Glide;
 import com.example.compumovilp.adapters.AdapterMensajes;
 import com.example.compumovilp.adapters.MensajeEnviar;
 import com.example.compumovilp.adapters.MensajeRecibir;
-import com.example.compumovilp.databinding.ActivityChatBinding;
-import com.example.compumovilp.databinding.ActivityPerfilCoordinador1Binding;
-import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;

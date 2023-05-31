@@ -20,7 +20,7 @@ public class Tarea {
         return estado;
     }
 
-    private int estado; //0: en espera //1 completado //2 rechazado
+    private int estado; //0: en espera //1 completado
 
 
     public void setEstado(int estado) {
