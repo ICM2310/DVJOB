@@ -227,9 +227,7 @@ public class UbicacionTiempoRealEmpleado extends AppCompatActivity implements On
                 // Manejar errores de Firebase
             }
         });
-
     }
-
     @Override
     protected void onResume() {
         super.onResume();
