@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import android.graphics.Color;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -47,6 +48,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -58,8 +61,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.maps.android.PolyUtil;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class UbicacionTiempoRealEmpleado extends AppCompatActivity implements OnMapReadyCallback {
     private ActivityUbicacionTiempoRealEmpleadoBinding binding;
@@ -263,14 +277,74 @@ public class UbicacionTiempoRealEmpleado extends AppCompatActivity implements On
                     markerOptions.title(geoCoderSearchLatLang(latLng));
                     targetLatitude = latLng.latitude;
                     targetLongitude = latLng.longitude;
-                    mMap.addMarker(markerOptions); //Agregar marcador al mapa
+                    mMap.addMarker(markerOptions);
                     double finalDistance = distance(currentLatitude, currentLongitude, targetLatitude, targetLongitude);
                     Toast toast = Toast.makeText(UbicacionTiempoRealEmpleado.this, "La distancie desde su posición actual es: " + String.valueOf(finalDistance) + " km", Toast.LENGTH_LONG);
                     toast.setDuration(Toast.LENGTH_LONG);
                     toast.show();
+
+                    // Agrega esta línea para dibujar la ruta
+                    drawRoute(new LatLng(currentLatitude, currentLongitude), latLng);
                 }
             });
         }
+    }
+
+    private void drawRoute(LatLng origin, LatLng destination) {
+        String url = getDirectionsUrl(origin, destination);
+        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    // Parsear la respuesta JSON
+                    JSONObject jsonObject = new JSONObject(response);
+                    // Obtener rutas
+                    JSONArray routes = jsonObject.getJSONArray("routes");
+                    JSONObject route = routes.getJSONObject(0);
+
+                    // Obtener piernas
+                    JSONArray legs = route.getJSONArray("legs");
+                    JSONObject leg = legs.getJSONObject(0);
+
+                    // Obtener pasos
+                    JSONArray steps = leg.getJSONArray("steps");
+                    List<LatLng> path = new ArrayList<>();
+                    for (int i = 0; i < steps.length(); i++) {
+                        JSONObject step = steps.getJSONObject(i);
+                        JSONObject polyline = step.getJSONObject("polyline");
+                        String polyline_points = polyline.getString("points");
+                        List<LatLng> singlePolyline = PolyUtil.decode(polyline_points);
+                        for (LatLng position : singlePolyline) {
+                            path.add(position);
+                        }
+                    }
+                    // Dibuja la ruta en el mapa
+                    PolylineOptions polylineOptions = new PolylineOptions();
+                    polylineOptions.color(Color.RED);
+                    polylineOptions.width(10);
+                    polylineOptions.addAll(path);
+                    Polyline polyline = mMap.addPolyline(polylineOptions);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        queue.add(request);
+    }
+
+    private String getDirectionsUrl(LatLng origin, LatLng destination) {
+        String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
+        String str_dest = "destination=" + destination.latitude + "," + destination.longitude;
+        String key = "key=" + getString(R.string.google_maps_key); // Reemplaza esto con tu clave API de Google
+        String parameters = str_origin + "&" + str_dest + "&" + key;
+        String output = "json";
+        return "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters;
     }
 
     private String geoCoderSearchLatLang(LatLng latLng) {
@@ -420,4 +494,5 @@ public class UbicacionTiempoRealEmpleado extends AppCompatActivity implements On
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
 }
