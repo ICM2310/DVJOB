@@ -1,6 +1,8 @@
 package com.example.compumovilp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -166,6 +168,10 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Log.d(TAG, "signInWithEmail:success");
                     FirebaseUser user = mAuth.getCurrentUser();
+                    SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("USER_ID", user.getUid());
+                    editor.apply();
                     updateUI(user);
                 } else {
                     Log.w(TAG, "signInWithEmail:failure", task.getException());

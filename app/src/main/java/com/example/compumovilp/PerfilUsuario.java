@@ -12,15 +12,19 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.compumovilp.databinding.ActivityPerfilUsuarioBinding;
@@ -53,6 +57,8 @@ public class PerfilUsuario extends AppCompatActivity {
     private FirebaseAuth mAuth;
     public static final String PATH_USERS="users/";
     public static final String PATH_USERSLOCATIONS="ubicacion/";
+    private static final int PERMISSION_REQUEST_CODE = 123;
+
 
     FirebaseDatabase database;
 
@@ -100,14 +106,25 @@ public class PerfilUsuario extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         ubicacionRef = database.getReference("ubicacion").child(user.getUid());
+        SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("USER_ID", user.getUid());
+        editor.apply();
 
-        database = FirebaseDatabase.getInstance();
+        Intent intent2 = new Intent(PerfilUsuario.this, ServicioNotificacion.class);
+        Log.e("USERPERFILIS", user.getUid()); // Verificar que el valor de userId no sea nulo
+        intent2.putExtra("USER_ID", user.getUid());
+        startService(intent2);
+        requestNotificationPermission();
+
+
+        mAuth = FirebaseAuth.getInstance();
 
         //Loclizacion en segundo plano
         Intent intent = new Intent(PerfilUsuario.this, ServicioLocalizacion.class);
         //assert user != null;
         intent.putExtra("USER_ID", user.getUid());
-        Log.d("USERID", "PerfilUsuario: " + user.getUid() + ", Foto de perfil: " );
+        Log.d("sdfdfsdfds", "PerfilUsuario: " + user.getUid() + ", Foto de perfil: " );
         startService(intent);
 
 
@@ -303,4 +320,28 @@ public class PerfilUsuario extends AppCompatActivity {
             }
         }).start();
     }
+
+    //Permisos de notiicacion
+    private void requestNotificationPermission() {
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.POST_NOTIFICATIONS)) {
+                Toast.makeText(PerfilUsuario.this, "No podras recivir notificaciones", Toast.LENGTH_LONG).show();
+            } else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, PERMISSION_REQUEST_CODE);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions,int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+            } else {
+                Toast.makeText(PerfilUsuario.this, "las notificaciones fueron denegadas", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
 }

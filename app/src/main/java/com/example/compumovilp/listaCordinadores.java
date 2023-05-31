@@ -2,23 +2,35 @@ package com.example.compumovilp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.compumovilp.adapters.cordinadoresAdapter;
-import com.example.compumovilp.adapters.usuariosAdapter;
 import com.example.compumovilp.databinding.ActivityListaCordinadoresBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -104,4 +116,6 @@ public class listaCordinadores extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
+
+
 }

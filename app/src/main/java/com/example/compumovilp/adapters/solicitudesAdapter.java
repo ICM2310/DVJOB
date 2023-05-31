@@ -38,7 +38,6 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
         mLayoutResourceId = layoutResourceId;
         mSolicitudes = solicitudes;
         this.userId = userId;
-
     }
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -103,7 +102,7 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
         imgAceptado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actualizarEstadoSolicitud(solicitud.getID(), 1);
+                actualizarEstadoSolicitud(solicitud.getID(), 1); //1 ACEPTADO
                 Toast.makeText(mContext, "Solicitud aceptada", Toast.LENGTH_SHORT).show();
                 mSolicitudes.remove(solicitud); // Remove the request from the list
                 notifyDataSetChanged(); // Refresh the adapter
@@ -113,7 +112,7 @@ public class solicitudesAdapter extends ArrayAdapter<Solicitud> {
         imgRechazado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actualizarEstadoSolicitud(solicitud.getID(), 2);
+                actualizarEstadoSolicitud(solicitud.getID(), 2); //2 RECHAZADO
                 Toast.makeText(mContext, "Solicitud rechazada", Toast.LENGTH_SHORT).show();
                 mSolicitudes.remove(solicitud); // Remove the request from the list
                 notifyDataSetChanged(); // Refresh the adapter

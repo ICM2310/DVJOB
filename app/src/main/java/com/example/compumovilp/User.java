@@ -16,8 +16,6 @@ public class User {
     }
 
 
-
-
     public String getUserID() {
         return userID;
     }
@@ -48,4 +46,5 @@ public class User {
     public void setProfileImageURL(String profileImageURL) {
         this.profileImageURL = profileImageURL;
     }
+
 }

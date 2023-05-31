@@ -13,8 +13,10 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -213,7 +215,10 @@ public class RegistroActivity extends AppCompatActivity {
                         upcrb.setDisplayName(binding.nombreReg.getText().toString()+" "+binding.apellidoReg.getText().toString());
                         upcrb.setPhotoUri(Uri.parse("path/to/pic"));//fake uri, use Firebase Storage
                         user.updateProfile(upcrb.build());
-
+                        SharedPreferences preferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("USER_ID", user.getUid());
+                        editor.apply();
                         // Create a User object with the user's data
                         User myUser = new User();
                         myUser.setName(binding.nombreReg.getText().toString() +" "+binding.apellidoReg.getText().toString());
