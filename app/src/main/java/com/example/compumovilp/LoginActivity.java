@@ -57,8 +57,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                binding.usuarioIn.setText("andres@gmai.com");
-                binding.contraIn.setText("andres");
+                binding.usuarioIn.setText("lopez@gmail.com");
+                binding.contraIn.setText("12345678");
                 sigin();
             }
 
@@ -75,7 +75,6 @@ public class LoginActivity extends AppCompatActivity {
                 .setNegativeButtonText("Cancelar")
                 .build();
 
-        // Agregar listener al botón de autenticación de huella digital
         binding.huella.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
