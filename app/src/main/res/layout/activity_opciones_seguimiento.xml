@@ -94,10 +94,10 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/bg_boton"
                 android:drawableStart="@drawable/baseline_chat"
-                android:paddingHorizontal="20dp"
                 android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
                 android:text="Chat con el empleado"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/seguimientoBtn"

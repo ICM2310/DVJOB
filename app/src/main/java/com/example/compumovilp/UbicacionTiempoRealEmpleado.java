@@ -111,10 +111,6 @@ public class UbicacionTiempoRealEmpleado extends AppCompatActivity implements On
                 }
             });
     ///
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

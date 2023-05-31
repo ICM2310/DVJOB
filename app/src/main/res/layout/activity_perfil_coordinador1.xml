@@ -105,6 +105,22 @@
                 android:text="Lista de empleados"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/climaBtn"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_boton"
+                android:drawableTop="@drawable/baseline_cloud_24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/roboto_bold"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="16dp"
+                android:text="Consulta el clima"
+                android:textAllCaps="false" />
+
 
         </LinearLayout>
 

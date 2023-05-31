@@ -63,10 +63,6 @@ public class PerfilCoordinador1 extends AppCompatActivity {
     private FusedLocationProviderClient mFusedLocationClient;
     private LocationCallback mLocationCallback;
     private DatabaseReference ubicacionRef;
-
-
-
-
     private Boolean settingsOK;
 
 
@@ -108,8 +104,7 @@ public class PerfilCoordinador1 extends AppCompatActivity {
         //Localizacion
         mLocationRequest = createLocationRequest();
         checkLocationSettings();
-        //
-        mAuth = FirebaseAuth.getInstance();
+            mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         //Obtener el usuario y la imagen de perfil de la base de datos
@@ -153,6 +148,14 @@ public class PerfilCoordinador1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), listaEmpleados.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.climaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Weather1.class);
                 startActivity(intent);
             }
         });
