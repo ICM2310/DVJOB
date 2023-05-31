@@ -19,7 +19,8 @@ Estudiante de ingenieria de sistemas de quinto semestre con conocimientos basico
   
 # Entregables
  Historias de Usuario
-![Diagrama en blanco](https://user-images.githubusercontent.com/62730462/232666681-9e7b8af5-738a-49fb-a3c0-320f943f2ada.jpeg)
+![Diagrama en blanco](https://github.com/ICM2310/DVJOB/assets/82338432/e1f6f279-2cb7-4509-bb67-eb476541df9a)
+
 
  
 # Diagrama de clases inicial del proyecto
