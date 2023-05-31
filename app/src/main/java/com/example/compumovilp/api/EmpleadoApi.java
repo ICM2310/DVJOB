@@ -31,4 +31,12 @@ public interface EmpleadoApi {
 
     @POST("tareas/")
     Call<Tarea> createTask(@Body Tarea tarea);
+
+    @GET("tareas")
+    Call<List<Tarea>> getTareas();
+
+    @PUT("tareas/{id}")
+    Call<Tarea> updateTarea(@Path("id") String id, @Body Tarea tarea);
+    @DELETE("tareas/{id}")
+    Call<Void> deleteTarea(@Path("id") String id);
 }
